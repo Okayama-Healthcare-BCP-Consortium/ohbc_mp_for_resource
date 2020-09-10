@@ -14,7 +14,7 @@ def preprocessing_for_mp(df):
 
     return task_name_list, weight_list, weight_limit, df_const, const_limits
 
-def resource_maximize(df, isBinary=True):
+def resource_maximize(df, isBinary=False):
     """リソースを最大化する数理計画問題"""
     
     # データの整形
