@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+          数理計画問題デモ
+        </title>
+    </head>
+    <body>
+        <h1>
+          数理計画問題デモ
+        </h1>
+        <h3>結果一覧</h3>
+        <ul>
+        {% for problem, result in problem2result.items() %}
+            <li>{{ problem }} : {{ result }}</li>
+        {% endfor %}
+        </ul>
+        <button type="button" onclick="history.back()">戻る</button>
+    </body>
+</html>

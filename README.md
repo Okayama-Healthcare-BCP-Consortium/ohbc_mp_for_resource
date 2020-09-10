@@ -11,6 +11,10 @@
 
     .
     ├── README.md          <- プロジェクトの全体像
+    ├── uploads            <- 入力データが置かれるディレクトリ
+    ├── templates          <- htmlファイルのためのディレクトリ
+    │   ├── index.html
+    │   └── result.html
     ├── model              <- 定式化に関するディレクトリ
     │   └── mp.py          <- 数理計画問題のモジュール
     └── main.py            <- システムのメインプログラム
@@ -23,20 +27,31 @@
 
 ### Step2
 
+以下のコマンドをターミナルで実行して下さい．
 ```shell
 git clone git@github.com:kunifuohbc/ohbc_mp_for_resource.git
 ```
 
 ### Step3
 
-main.pyのあるディレクトリに移動し，使いたいデータをdata.xlsxとしてそのディレクトリにおいて下さい．
+main.pyのあるディレクトリに移動して下さい．
 
 ### Step4
 
+以下のコマンドをターミナルで実行して下さい．
 ```shell
 docker pull kunifuohbc/ohbc_mp
-docker run -v $(pwd):/work kunifuohbc/ohbc_mp
+docker run -p 3000:3000 -v $(pwd):/work kunifuohbc/ohbc_mp
 ```
+### Step4
+
+ブラウザにhttp://localhost:3000/を入力して下さい．
+
+### Step5
+
+以下のデモのように結果を取得できます．
+![demo](https://raw.github.com/wiki/Okayama-Healthcare-BCP-Consortium/ohbc_mp_for_resource/images/mp_demo1.gif)
+
 
 ## Licence
 
