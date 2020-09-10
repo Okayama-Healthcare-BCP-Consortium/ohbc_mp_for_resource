@@ -50,8 +50,7 @@ docker run -p 3000:3000 -v $(pwd):/work kunifuohbc/ohbc_mp
 ### Step5
 
 以下のデモのように結果を取得できます．
-![demo](https://github.com/Okayama-Healthcare-BCP-Consortium/ohbc_mp_for_resource/wiki/images/mp_demo1.gif)
-
+![mp_demo1](https://user-images.githubusercontent.com/70554494/92748686-57c4b100-f3c0-11ea-899d-28f97bde292f.gif)
 
 ## Licence
 
