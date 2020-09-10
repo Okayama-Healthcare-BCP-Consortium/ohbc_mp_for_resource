@@ -1,3 +1,4 @@
+import numpy as np
 import pulp
 import sys
 
@@ -6,7 +7,7 @@ def preprocessing_for_mp(df):
 
     task_name_list = df['業務名'].tolist()[:-1]
     
-    weight_list = df['重要度'].tolist()[:-1]
+    weight_list = np.array(df['重要度'][:-1])
     weight_limit = df['重要度'].tolist()[-1]
     
     df_const = df.iloc[:-1, 2:]
@@ -34,7 +35,7 @@ def resource_maximize(df, isBinary=False):
         tasks = [pulp.LpVariable('t{}'.format(idx), cat=pulp.LpContinuous, lowBound=0, upBound=1) for idx in range(len(task_name_list))]
 
     # 目的関数定義
-    demands_each_task = [row.values.sum()*alpha for (_, row), alpha in zip(df_resource.iterrows(), alpha_list)]
+    demands_each_task = alpha_list * np.array(df_resource.apply(np.sum, axis=1))
     problem += pulp.lpDot(demands_each_task, tasks)
 
     # 制約条件定義 
