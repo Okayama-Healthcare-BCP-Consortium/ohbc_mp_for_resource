@@ -34,14 +34,15 @@ def uploads_file():
 
 @app.route('/result')
 def render_result():
+    
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], request.args.get('filename'))
-    print(file_path)
     sheet2df = pd.read_excel(file_path, sheet_name=None)
-
     problem2result = dict()
     
     for sheet, df in sheet2df.items():
         problem2result[sheet] = mp.resource_maximize(df, isBinary=False)
+
+    os.remove(file_path) # 不要になったデータのコピーを削除
 
     return render_template('result.html', problem2result=problem2result)
 
