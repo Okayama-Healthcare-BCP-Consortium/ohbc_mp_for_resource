@@ -41,8 +41,9 @@ main.pyのあるディレクトリに移動して下さい．
 以下のコマンドをターミナルで実行して下さい．
 ```shell
 docker pull kunifuohbc/ohbc_mp
-docker run -p 3000:3000 -v $(pwd):/work kunifuohbc/ohbc_mp
+docker run -p 3000:3000 -v $(pwd):/work --rm kunifuohbc/ohbc_mp
 ```
+
 ### Step4
 
 ブラウザにhttp://localhost:3000/を入力して下さい．
@@ -50,6 +51,7 @@ docker run -p 3000:3000 -v $(pwd):/work kunifuohbc/ohbc_mp
 ### Step5
 
 以下のデモのように結果を取得できます．
+
 ![mp_demo1](https://user-images.githubusercontent.com/70554494/92748686-57c4b100-f3c0-11ea-899d-28f97bde292f.gif)
 
 ## Licence
