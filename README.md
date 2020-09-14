@@ -46,7 +46,7 @@ docker run -p 3000:3000 -v $(pwd):/work --rm kunifuohbc/ohbc_mp
 
 ### Step4
 
-ブラウザにhttp://localhost:3000/を入力して下さい．
+ブラウザに http://localhost:3000/ を入力して下さい．
 
 ### Step5
 
