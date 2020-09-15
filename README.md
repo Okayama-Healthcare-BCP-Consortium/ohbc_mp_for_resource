@@ -1,4 +1,4 @@
-数理計画問題(Mathematical programming problem)を用いたリソースにおける優先業務選択補助システム
+数理計画問題(Mathematical programming problem)を用いたリソースにおける優先業務選択補助ソフトウェア
 ==============================
 
 ## Target
@@ -17,7 +17,7 @@
     │   └── result.html
     ├── model              <- 定式化に関するディレクトリ
     │   └── mp.py          <- 数理計画問題のモジュール
-    └── main.py            <- システムのメインプログラム
+    └── main.py            <- メインプログラム
 
 ## Usage
 

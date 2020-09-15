@@ -3,19 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <title>
-          数理計画問題デモ
+          リソースについての数理計画問題デモ
         </title>
     </head>
     <body>
         <h1>
-          数理計画問題デモ
+          リソースについての数理計画問題デモ
         </h1>
         <h3>結果一覧</h3>
-        <ul>
         {% for problem, result in problem2result.items() %}
-            <li>{{ problem }} : {{ result }}</li>
+          <h4>{{ problem }}問題</h4>
+          <table>
+            <tr>
+              <th>業務名</th>
+              <th>確率</th>
+            </tr>
+          {% for task, prob in result.items() %}
+            <tr>
+              <td>{{ task }}</td>
+              <td>{{ prob }}</td>
+            </tr>
+          {% endfor %}
+          </table>
         {% endfor %}
-        </ul>
         <button type="button" onclick="history.back()">戻る</button>
     </body>
 </html>
