@@ -12,8 +12,10 @@ app = Flask(__name__, template_folder='templates')
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 # ファイルを受け取る方法の指定
 @app.route('/', methods=['GET', 'POST'])
@@ -32,6 +34,7 @@ def uploads_file():
             return redirect(url_for('render_result', filename=filename))
     return render_template('index.html')
 
+
 @app.route('/result')
 def render_result():
     
@@ -45,6 +48,7 @@ def render_result():
     os.remove(file_path) # 不要になったデータのコピーを削除
 
     return render_template('result.html', problem2result=problem2result)
+
 
 if __name__ == "__main__":
 

@@ -2,6 +2,7 @@ import numpy as np
 import pulp
 import sys
 
+
 def preprocessing_for_mp(df):
     """データの整形をする関数"""
 
@@ -14,6 +15,7 @@ def preprocessing_for_mp(df):
     const_limits = df.iloc[-1, 2:].tolist()
 
     return task_name_list, weight_list, weight_limit, df_const, const_limits
+
 
 def resource_maximize(df, isBinary=False):
     """リソースを最大化する数理計画問題"""
