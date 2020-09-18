@@ -29,7 +29,7 @@
 
 以下のコマンドをターミナルで実行して下さい．
 ```shell
-git clone git@github.com:kunifuohbc/ohbc_mp_for_resource.git
+git clone git@github.com:Okayama-Healthcare-BCP-Consortium/ohbc_mp_for_resource.git
 ```
 
 ### Step3
